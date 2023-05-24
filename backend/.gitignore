@@ -51,21 +51,21 @@ frontend/Thumbs.db
 
 # Backend
 # dependencies
-/backend/node_modules
-/backend/.pnp
+backend/node_modules
+backend/.pnp
 backend/.pnp.js
 
 
 # logs
-/backend/logs
+backend/logs
 
 
 # testing
-/backend/coverage
+backend/coverage
 
 
 # production
-/backend/build
+backend/build
 
 
 # misc
