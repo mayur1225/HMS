@@ -4,9 +4,12 @@
   "description": "",
   "main": "dist/app.js",
   "scripts": {
+    "build": "babel index.ts -d dist",
     "start": "tsc && node dist/app.js",
-    "lint": "eslint . --ext .ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/app.js\""
   },
   "keywords": [],
   "author": "",
@@ -20,10 +23,36 @@
     "@typescript-eslint/parser": "^5.59.7",
     "babel-loader": "^9.1.2",
     "eslint": "^8.41.0",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.4",
-    "webpack": "^5.83.1"
+    "webpack": "^5.83.1",
+    "webpack-dev-server": "^4.15.0"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "@elastic/elasticsearch": "^8.7.0",
+    "athena-express": "^7.1.5",
+    "aws-sdk": "^2.1383.0",
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "concurrently": "^8.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.2.0",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.2",
+    "nodemon": "^2.0.22",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "pg-monitor": "^2.0.0",
+    "pg-promise": "^11.4.3",
+    "winston": "^3.8.2",
+    "winston-cloudwatch": "^6.1.1"
+  },
+  "engines": {
+    "node": ">= 18.10",
+    "npm": ">= 9.6.7"
   }
 }

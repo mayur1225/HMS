@@ -1,82 +1,76 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# dependencies
+/node_modules
 
+#dist folder
+/dist
 
-# Frontend
-# Compiled output
-/frontend/dist
-/frontend/tmp
-/frontend/out-tsc
-/frontend/bazel-out
+# Environment variables
+.env
 
+# Optional npm cache directory
+.npm
 
-# Node
-/frontend/node_modules
-frontend/npm-debug.log
-frontend/yarn-error.log
+# nyc test coverage
+.nyc_output
 
+# Coverage 
+/coverage
+
+# Coveralls.yml
+.coveralls.yml
+
+# Documentation
+docs
+
+# Optional REPL history
+.node_repl_history
+
+# Logs
+logs
+*.log
+npm-debug.log*
 
 # IDEs and editors
-frontend/.idea/
-frontend/.project
-frontend/.classpath
-frontend/.c9/
-frontend/*.launch
-frontend/.settings/
-frontend/*.sublime-workspace
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-
-# Visual Studio Code
-frontend/.vscode/*
-!frontend/.vscode/settings.json
-!frontend/.vscode/tasks.json
-!frontend/.vscode/launch.json
-!frontend/.vscode/extensions.json
-frontend/.history/*
-
-
-# Miscellaneous
-/frontend/.angular/cache
-frontend/.sass-cache/
-/frontend/connect.lock
-/frontend/coverage
-/frontend/libpeerconnection.log
-frontend/testem.log
-/frontend/typings
-
-
-# System files
-frontend/.DS_Store
-frontend/Thumbs.db
-
-
-# Backend
-# dependencies
-backend/node_modules
-backend/.pnp
-backend/.pnp.js
-
-
-# logs
-backend/logs
-
-
-# testing
-backend/coverage
-
-
-# production
-backend/build
-
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
 
 # misc
-backend/.DS_Store
-backend/.env
-backend/.env.local
-backend/.env.development.local
-backend/.env.test.local
-backend/.env.production.local
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
 
+# System Files and Folders
+.DS_Store
+Thumbs.db
+/.history
 
-backend/npm-debug.log*
-backend/yarn-debug.log*
-backend/yarn-error.log*
+__pycache__/
+**/logs
+**/node_modules
+**/dist
+**/eslint.xml
+**/*~
+**/package-lock.json
+**/*.log
+**/.nyc_output
+**/.vscode
+**/coverage
+**/*build.json
+**/password.txt
