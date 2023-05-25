@@ -50,6 +50,7 @@ backend/.pnp.js
 
 # logs
 /backend/logs
+/backend/dist
 
 # testing
 /backend/coverage

@@ -12,7 +12,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "lint-fix": "ng lint --fix"
-
   },
   "private": false,
   "dependencies": {
@@ -25,6 +24,7 @@
     "@angular/platform-browser": "^15.1.4",
     "@angular/platform-browser-dynamic": "^15.1.4",
     "@angular/router": "^15.1.4",
+    "@auth0/angular-jwt": "^5.1.2",
     "@ng-bootstrap/ng-bootstrap": "^14.0.1",
     "@popperjs/core": "^2.11.6",
     "apexcharts": "^3.37.0",
