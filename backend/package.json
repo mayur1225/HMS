@@ -4,12 +4,10 @@
   "description": "",
   "main": "dist/app.js",
   "scripts": {
-    "build": "babel index.ts -d dist",
-    "start": "tsc && node dist/app.js",
-    "lint": "eslint src/**/*.ts",
-    "format": "eslint src/**/*.ts --fix",
+    "build": "babel app.ts -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/app.js\""
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/app.js\"",
+    "start": "tsc && node dist/app.js"
   },
   "keywords": [],
   "author": "",
