@@ -11,19 +11,19 @@ const http_1 = __importDefault(require("http"));
 const logger_1 = require("./src/config/logger");
 const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
+const env_var_1 = require("./src/config/env-var");
 dotenv_1.default.config();
 //require('./app/config/database');
 const app = (0, express_1.default)();
-const port = process.env.PORT;
+const PORT = process.env.PORT;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
-app.listen(port, () => {
-    logger_1.logger.info(`⚡️[server]: Server is running at http://localhost:${port}`);
+app.listen(PORT, () => {
+    logger_1.logger.info(`⚡️[server]: Server is running at http://localhost:${PORT}`);
 });
-const server = http_1.default.createServer((req, res) => {
-    console.log("🚀 ~ file: index.ts:23 ~ server ~ res:", res);
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/html');
-    res.end('<h1>Hello World</h1>');
+const server = (env_var_1.NODE_ENV === 'production') ? http_1.default.createServer(app) : http_1.default.createServer(app);
+server.listen(PORT);
+server.on('listening', () => {
+    logger_1.logger.info(`${env_var_1.NODE_ENV.toUpperCase()} Server is Listening on PORT ${PORT}`);
 });
 //# sourceMappingURL=app.js.map

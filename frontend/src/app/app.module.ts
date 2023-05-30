@@ -18,7 +18,6 @@ import { NavCollapseComponent } from './components/layouts/admin/navigation/nav-
 import { NavGroupComponent } from './components/layouts/admin/navigation/nav-content/nav-group/nav-group.component';
 import { NavItemComponent } from './components/layouts/admin/navigation/nav-content/nav-item/nav-item.component';
 import { NavigationItem } from './components/layouts/admin/navigation/navigation';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
