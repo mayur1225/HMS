@@ -1,4 +1,4 @@
-import express, { Express, Request, Response } from 'express';
+import express, { Express } from 'express';
 import http from 'http';
 
 /**
@@ -20,10 +20,10 @@ app.listen(PORT, () => {
   logger.info(`⚡️[server]: Server is running at http://localhost:${PORT}`);
 });
 
-const server = (NODE_ENV === 'production') ? http.createServer( app) : http.createServer(app);
+// const server = (NODE_ENV === 'production') ? http.createServer( app) : http.createServer(app);
 
-server.listen(PORT);
+// server.listen(PORT);
 
-server.on('listening', () => {
-  logger.info(`${NODE_ENV.toUpperCase()} Server is Listening on PORT ${PORT}`);
-});
+// server.on('listening', () => {
+//   logger.info(`${NODE_ENV.toUpperCase()} Server is Listening on PORT ${PORT}`);
+// });

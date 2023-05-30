@@ -1,4 +1,4 @@
-import { Router } from 'express';
+//import { Router } from 'express';
 
 
 // const { getUserByName } = require('../../middleware/check-user-existance');
@@ -8,7 +8,7 @@ import { Router } from 'express';
 // const { validateToken } = require('./validate-token');
 // const { logout } = require('./logout');
 
-const app = Router();
+//const app = Router();
 
 //const { passportAuthenticate } = require('../../middleware/passport-autheticate');
 
